@@ -14,12 +14,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - file_owner_etc_group | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - no_reboot_needed | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_owner_etc_group | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure owner 0 on /etc/group
   file:
@@ -27,12 +27,12 @@
     owner: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - file_owner_etc_group | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - no_reboot_needed | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_owner_etc_group | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_owner_etc_group
   - medium_severity
@@ -61,12 +61,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - file_groupowner_etc_passwd | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ file_groupowner_etc_passwd | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure group owner 0 on /etc/passwd
   file:
@@ -74,12 +74,12 @@
     group: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - file_groupowner_etc_passwd | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ file_groupowner_etc_passwd | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_groupowner_etc_passwd
   - medium_severity
@@ -108,12 +108,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - file_permissions_etc_passwd | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ file_permissions_etc_passwd | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure permission 0644 on /etc/passwd
   file:
@@ -121,12 +121,12 @@
     mode: 420
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - file_permissions_etc_passwd | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ file_permissions_etc_passwd | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_permissions_etc_passwd
   - medium_severity
@@ -155,12 +155,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - file_owner_etc_passwd | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ file_owner_etc_passwd | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure owner 0 on /etc/passwd
   file:
@@ -168,12 +168,12 @@
     owner: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - file_owner_etc_passwd | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ file_owner_etc_passwd | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_owner_etc_passwd
   - medium_severity
@@ -202,12 +202,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - file_groupowner_etc_shadow | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ file_groupowner_etc_shadow | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure group owner 0 on /etc/shadow
   file:
@@ -215,12 +215,12 @@
     group: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - file_groupowner_etc_shadow | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ file_groupowner_etc_shadow | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_groupowner_etc_shadow
   - medium_severity
@@ -249,12 +249,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - file_permissions_etc_shadow | bool
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_permissions_etc_shadow | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure permission 0000 on /etc/shadow
   file:
@@ -262,12 +262,12 @@
     mode: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - file_permissions_etc_shadow | bool
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_permissions_etc_shadow | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_permissions_etc_shadow
   - medium_severity
@@ -296,12 +296,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - file_owner_etc_shadow | bool
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_owner_etc_shadow | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure owner 0 on /etc/shadow
   file:
@@ -309,12 +309,12 @@
     owner: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - file_owner_etc_shadow | bool
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_owner_etc_shadow | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_owner_etc_shadow
   - medium_severity
@@ -343,12 +343,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - no_reboot_needed | bool
-  - file_permissions_etc_group | bool
-  - medium_severity | bool
-  - configure_strategy | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ file_permissions_etc_group | bool }'
+  - '{ medium_severity | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure permission 0644 on /etc/group
   file:
@@ -356,12 +356,12 @@
     mode: 420
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - no_reboot_needed | bool
-  - file_permissions_etc_group | bool
-  - medium_severity | bool
-  - configure_strategy | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ file_permissions_etc_group | bool }'
+  - '{ medium_severity | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_permissions_etc_group
   - medium_severity
@@ -390,12 +390,12 @@
   - PCI-DSS-Req-8.7.c
   - CJIS-5.5.2.2
   when:
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - file_groupowner_etc_group | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ file_groupowner_etc_group | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure group owner 0 on /etc/group
   file:
@@ -403,12 +403,12 @@
     group: 0
   when:
   - file_exists.stat is defined and file_exists.stat.exists
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - file_groupowner_etc_group | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ file_groupowner_etc_group | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_groupowner_etc_group
   - medium_severity
@@ -430,12 +430,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - unknown_strategy | bool
-  - dconf_gnome_screensaver_mode_blank | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ dconf_gnome_screensaver_mode_blank | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_mode_blank
   - medium_severity
@@ -457,12 +457,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - unknown_strategy | bool
-  - dconf_gnome_screensaver_mode_blank | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ dconf_gnome_screensaver_mode_blank | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_mode_blank
   - medium_severity
@@ -485,12 +485,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - dconf_gnome_screensaver_lock_enabled | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ dconf_gnome_screensaver_lock_enabled | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_lock_enabled
   - medium_severity
@@ -513,12 +513,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - dconf_gnome_screensaver_lock_enabled | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ dconf_gnome_screensaver_lock_enabled | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_lock_enabled
   - medium_severity
@@ -542,12 +542,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - dconf_gnome_screensaver_idle_activation_enabled | bool
-  - medium_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ dconf_gnome_screensaver_idle_activation_enabled | bool }'
+  - '{ medium_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_idle_activation_enabled
   - medium_severity
@@ -570,12 +570,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - dconf_gnome_screensaver_idle_activation_enabled | bool
-  - medium_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ dconf_gnome_screensaver_idle_activation_enabled | bool }'
+  - '{ medium_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_idle_activation_enabled
   - medium_severity
@@ -599,12 +599,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - dconf_gnome_screensaver_idle_delay | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ dconf_gnome_screensaver_idle_delay | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_idle_delay
   - medium_severity
@@ -627,12 +627,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - dconf_gnome_screensaver_idle_delay | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ dconf_gnome_screensaver_idle_delay | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_gnome_screensaver_idle_delay
   - medium_severity
@@ -655,12 +655,12 @@
   check_mode: false
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - dconf_use_text_backend | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ dconf_use_text_backend | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_use_text_backend
   - high_severity
@@ -679,12 +679,12 @@
   check_mode: false
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - dconf_use_text_backend | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ dconf_use_text_backend | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - dconf_use_text_backend
   - high_severity
@@ -715,12 +715,12 @@
   - PCI-DSS-Req-6.2
   - CJIS-5.10.4.1
   when:
-  - ensure_gpgcheck_never_disabled | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ ensure_gpgcheck_never_disabled | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure gpgcheck Enabled For All yum Package Repositories
   with_items: '{{ yum_find.files }}'
@@ -745,12 +745,12 @@
   - PCI-DSS-Req-6.2
   - CJIS-5.10.4.1
   when:
-  - ensure_gpgcheck_never_disabled | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ ensure_gpgcheck_never_disabled | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Read permission of GPG key directory
   stat:
@@ -773,12 +773,12 @@
   - PCI-DSS-Req-6.2
   - CJIS-5.10.4.1
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - ensure_redhat_gpgkey_installed | bool
-  - medium_complexity | bool
-  - medium_disruption | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ ensure_redhat_gpgkey_installed | bool }'
+  - '{ medium_complexity | bool }'
+  - '{ medium_disruption | bool }'
 
 - name: Read signatures in GPG key
   shell: 'set -o pipefail gpg --with-fingerprint --with-colons "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release" | grep "^fpr"
@@ -804,12 +804,12 @@
   - PCI-DSS-Req-6.2
   - CJIS-5.10.4.1
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - ensure_redhat_gpgkey_installed | bool
-  - medium_complexity | bool
-  - medium_disruption | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ ensure_redhat_gpgkey_installed | bool }'
+  - '{ medium_complexity | bool }'
+  - '{ medium_disruption | bool }'
 
 - name: Set Fact - Valid fingerprints
   set_fact:
@@ -830,12 +830,12 @@
   - PCI-DSS-Req-6.2
   - CJIS-5.10.4.1
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - ensure_redhat_gpgkey_installed | bool
-  - medium_complexity | bool
-  - medium_disruption | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ ensure_redhat_gpgkey_installed | bool }'
+  - '{ medium_complexity | bool }'
+  - '{ medium_disruption | bool }'
 
 - name: Import RedHat GPG key
   rpm_key:
@@ -846,12 +846,12 @@
   - ( gpg_fingerprints.stdout_lines | difference(gpg_valid_fingerprints)) | length == 0
   - gpg_fingerprints.stdout_lines | length > 0
   - ansible_distribution == "RedHat"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - ensure_redhat_gpgkey_installed | bool
-  - medium_complexity | bool
-  - medium_disruption | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ ensure_redhat_gpgkey_installed | bool }'
+  - '{ medium_complexity | bool }'
+  - '{ medium_disruption | bool }'
   tags:
   - ensure_redhat_gpgkey_installed
   - high_severity
@@ -875,12 +875,12 @@
   check_mode: false
   when:
   - ansible_distribution == "Fedora"
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - ensure_gpgcheck_globally_activated | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ ensure_gpgcheck_globally_activated | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - ensure_gpgcheck_globally_activated
   - high_severity
@@ -907,12 +907,12 @@
     create: false
   when:
   - (ansible_distribution == "RedHat" or ansible_distribution == "CentOS" or yum_config_file.stat.exists)
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - ensure_gpgcheck_globally_activated | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ ensure_gpgcheck_globally_activated | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - ensure_gpgcheck_globally_activated
   - high_severity
@@ -939,12 +939,12 @@
     create: false
   when:
   - ansible_distribution == "Fedora"
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - unknown_strategy | bool
-  - ensure_gpgcheck_globally_activated | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ ensure_gpgcheck_globally_activated | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - ensure_gpgcheck_globally_activated
   - high_severity
@@ -982,13 +982,13 @@
   - CJIS-5.10.4.1
   - DISA-STIG-RHEL-07-020260
   when:
-  - security_patches_up_to_date | bool
-  - reboot_required | bool
-  - high_severity | bool
-  - skip_ansible_lint | bool
-  - high_disruption | bool
-  - patch_strategy | bool
-  - low_complexity | bool
+  - '{ security_patches_up_to_date | bool }'
+  - '{ reboot_required | bool }'
+  - '{ high_severity | bool }'
+  - '{ skip_ansible_lint | bool }'
+  - '{ high_disruption | bool }'
+  - '{ patch_strategy | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure AIDE is installed
   package:
@@ -998,12 +998,12 @@
   - aide
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - aide_periodic_cron_checking | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ aide_periodic_cron_checking | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - aide_periodic_cron_checking
   - medium_severity
@@ -1033,12 +1033,12 @@
     job: /usr/sbin/aide --check
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - aide_periodic_cron_checking | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ aide_periodic_cron_checking | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - aide_periodic_cron_checking
   - medium_severity
@@ -1081,12 +1081,12 @@
   - PCI-DSS-Req-11.5
   - CJIS-5.10.1.3
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - aide_build_database | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ aide_build_database | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Build and Test AIDE Database
   command: /usr/sbin/aide --init
@@ -1108,12 +1108,12 @@
   - PCI-DSS-Req-11.5
   - CJIS-5.10.1.3
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - aide_build_database | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ aide_build_database | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Check whether the stock AIDE Database exists
   stat:
@@ -1136,12 +1136,12 @@
   - PCI-DSS-Req-11.5
   - CJIS-5.10.1.3
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - aide_build_database | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ aide_build_database | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Stage AIDE Database
   copy:
@@ -1151,12 +1151,12 @@
     remote_src: true
   when:
   - (aide_database_stat.stat.exists is defined and aide_database_stat.stat.exists)
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - aide_build_database | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ aide_build_database | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - aide_build_database
   - medium_severity
@@ -1195,12 +1195,12 @@
   - PCI-DSS-Req-11.5
   - CJIS-5.10.1.3
   when:
-  - package_aide_installed | bool
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - enable_strategy | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ package_aide_installed | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ enable_strategy | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Read list of files with incorrect permissions
   shell: 'set -o pipefail rpm -Va --nofiledigest | awk ''{ if (substr($0,2,1)=="M") print $NF }'' '
@@ -1230,12 +1230,12 @@
   - CJIS-5.10.4.1
   - DISA-STIG-RHEL-07-010010
   when:
-  - high_complexity | bool
-  - no_reboot_needed | bool
-  - rpm_verify_permissions | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - medium_disruption | bool
+  - '{ high_complexity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ rpm_verify_permissions | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ medium_disruption | bool }'
 
 - name: Correct file permissions with RPM
   shell: rpm --setperms $(rpm -qf '{{ item }}')
@@ -1244,12 +1244,12 @@
   with_items: '{{ files_with_incorrect_permissions.stdout_lines }}'
   when:
   - (files_with_incorrect_permissions.stdout_lines | length > 0)
-  - high_complexity | bool
-  - no_reboot_needed | bool
-  - rpm_verify_permissions | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - medium_disruption | bool
+  - '{ high_complexity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ rpm_verify_permissions | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ medium_disruption | bool }'
   tags:
   - rpm_verify_permissions
   - high_severity
@@ -1274,12 +1274,12 @@
     package_manager_reinstall_cmd: dnf reinstall -y
   when:
   - ansible_distribution == "Fedora"
-  - high_complexity | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - rpm_verify_hashes | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
+  - '{ high_complexity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ rpm_verify_hashes | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
   tags:
   - rpm_verify_hashes
   - high_severity
@@ -1302,12 +1302,12 @@
     package_manager_reinstall_cmd: yum reinstall -y
   when:
   - (ansible_distribution == "RedHat" or ansible_distribution == "OracleLinux")
-  - high_complexity | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - rpm_verify_hashes | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
+  - '{ high_complexity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ rpm_verify_hashes | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
   tags:
   - rpm_verify_hashes
   - high_severity
@@ -1334,12 +1334,12 @@
   changed_when: false
   when:
   - (package_manager_reinstall_cmd is defined)
-  - high_complexity | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - rpm_verify_hashes | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
+  - '{ high_complexity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ rpm_verify_hashes | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
   check_mode: false
   tags:
   - rpm_verify_hashes
@@ -1365,12 +1365,12 @@
   with_items: '{{ files_with_incorrect_hash.stdout_lines }}'
   when:
   - (package_manager_reinstall_cmd is defined and (files_with_incorrect_hash.stdout_lines | length > 0))
-  - high_complexity | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - rpm_verify_hashes | bool
-  - unknown_strategy | bool
-  - medium_disruption | bool
+  - '{ high_complexity | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ rpm_verify_hashes | bool }'
+  - '{ unknown_strategy | bool }'
+  - '{ medium_disruption | bool }'
   tags:
   - rpm_verify_hashes
   - high_severity
@@ -1410,12 +1410,12 @@
   - PCI-DSS-Req-11.5
   - CJIS-5.10.1.3
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - disable_prelink | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ disable_prelink | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: disable prelinking
   lineinfile:
@@ -1424,12 +1424,12 @@
     line: PRELINKING=no
   when:
   - prelink_exists.stat.exists
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - disable_prelink | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ disable_prelink | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - disable_prelink
   - medium_severity
@@ -1456,12 +1456,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - sysctl_net_ipv4_conf_all_send_redirects | bool
-  - low_complexity | bool
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ sysctl_net_ipv4_conf_all_send_redirects | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_conf_all_send_redirects
   - medium_severity
@@ -1485,12 +1485,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - sysctl_net_ipv4_conf_default_send_redirects | bool
-  - low_complexity | bool
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ sysctl_net_ipv4_conf_default_send_redirects | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_conf_default_send_redirects
   - medium_severity
@@ -1515,12 +1515,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - sysctl_net_ipv4_conf_default_accept_redirects | bool
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ sysctl_net_ipv4_conf_default_accept_redirects | bool }'
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_conf_default_accept_redirects
   - medium_severity
@@ -1545,12 +1545,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - disable_strategy | bool
-  - reboot_required | bool
-  - sysctl_net_ipv4_conf_all_accept_redirects | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ sysctl_net_ipv4_conf_all_accept_redirects | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_conf_all_accept_redirects
   - medium_severity
@@ -1574,12 +1574,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - sysctl_net_ipv4_conf_default_accept_source_route | bool
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ sysctl_net_ipv4_conf_default_accept_source_route | bool }'
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_conf_default_accept_source_route
   - medium_severity
@@ -1604,12 +1604,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - disable_strategy | bool
-  - sysctl_net_ipv4_tcp_syncookies | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ disable_strategy | bool }'
+  - '{ sysctl_net_ipv4_tcp_syncookies | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_tcp_syncookies
   - medium_severity
@@ -1633,12 +1633,12 @@
     reload: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - sysctl_net_ipv4_icmp_echo_ignore_broadcasts | bool
-  - low_complexity | bool
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ sysctl_net_ipv4_icmp_echo_ignore_broadcasts | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sysctl_net_ipv4_icmp_echo_ignore_broadcasts
   - medium_severity
@@ -1661,12 +1661,12 @@
     state: started
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - service_firewalld_enabled | bool
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - enable_strategy | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ service_firewalld_enabled | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ enable_strategy | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - service_firewalld_enabled
   - medium_severity
@@ -1688,12 +1688,12 @@
     line: install dccp /bin/true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - kernel_module_dccp_disabled | bool
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ kernel_module_dccp_disabled | bool }'
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - kernel_module_dccp_disabled
   - medium_severity
@@ -1714,12 +1714,12 @@
     line: install sctp /bin/true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - disable_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - kernel_module_sctp_disabled | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ disable_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ kernel_module_sctp_disabled | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - kernel_module_sctp_disabled
   - medium_severity
@@ -1740,12 +1740,12 @@
     line: install bluetooth /bin/true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - kernel_module_bluetooth_disabled | bool
-  - reboot_required | bool
-  - disable_strategy | bool
-  - medium_severity | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ kernel_module_bluetooth_disabled | bool }'
+  - '{ reboot_required | bool }'
+  - '{ disable_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - kernel_module_bluetooth_disabled
   - medium_severity
@@ -1772,12 +1772,12 @@
   changed_when: false
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - audit_rules_privileged_commands | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ audit_rules_privileged_commands | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_privileged_commands
   - medium_severity
@@ -1812,12 +1812,12 @@
   register: files_result
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - audit_rules_privileged_commands | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ audit_rules_privileged_commands | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_privileged_commands
   - medium_severity
@@ -1852,12 +1852,12 @@
   - files
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - audit_rules_privileged_commands | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ audit_rules_privileged_commands | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_privileged_commands
   - medium_severity
@@ -1891,12 +1891,12 @@
   when:
   - files_result.results is defined and item.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - audit_rules_privileged_commands | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ audit_rules_privileged_commands | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_privileged_commands
   - medium_severity
@@ -1930,12 +1930,12 @@
   - '{{ files_result.results }}'
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - audit_rules_privileged_commands | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ audit_rules_privileged_commands | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_privileged_commands
   - medium_severity
@@ -1964,12 +1964,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2000,12 +2000,12 @@
   register: find_lchown
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2034,12 +2034,12 @@
   when:
   - find_lchown.matched is defined and find_lchown.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2068,12 +2068,12 @@
   when:
   - find_lchown.matched is defined and find_lchown.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2102,12 +2102,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2137,12 +2137,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2171,12 +2171,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2207,12 +2207,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lchown | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lchown | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lchown
   - medium_severity
@@ -2239,12 +2239,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2275,12 +2275,12 @@
   register: find_fchownat
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2309,12 +2309,12 @@
   when:
   - find_fchownat.matched is defined and find_fchownat.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2343,12 +2343,12 @@
   when:
   - find_fchownat.matched is defined and find_fchownat.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2377,12 +2377,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2412,12 +2412,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2446,12 +2446,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2482,12 +2482,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchownat | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchownat | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchownat
   - medium_severity
@@ -2514,12 +2514,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2550,12 +2550,12 @@
   register: find_setxattr
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2584,12 +2584,12 @@
   when:
   - find_setxattr.matched is defined and find_setxattr.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2618,12 +2618,12 @@
   when:
   - find_setxattr.matched is defined and find_setxattr.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2652,12 +2652,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2687,12 +2687,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2721,12 +2721,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2757,12 +2757,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_setxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_setxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_setxattr
   - medium_severity
@@ -2789,12 +2789,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -2825,12 +2825,12 @@
   register: find_chmod
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -2859,12 +2859,12 @@
   when:
   - find_chmod.matched is defined and find_chmod.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -2893,12 +2893,12 @@
   when:
   - find_chmod.matched is defined and find_chmod.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -2927,12 +2927,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -2962,12 +2962,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -2996,12 +2996,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -3032,12 +3032,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - audit_rules_dac_modification_chmod | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ audit_rules_dac_modification_chmod | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chmod
   - medium_severity
@@ -3064,12 +3064,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3100,12 +3100,12 @@
   register: find_removexattr
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3134,12 +3134,12 @@
   when:
   - find_removexattr.matched is defined and find_removexattr.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3168,12 +3168,12 @@
   when:
   - find_removexattr.matched is defined and find_removexattr.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3202,12 +3202,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3237,12 +3237,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3271,12 +3271,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3307,12 +3307,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_removexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_removexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_removexattr
   - medium_severity
@@ -3339,12 +3339,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3375,12 +3375,12 @@
   register: find_lsetxattr
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3409,12 +3409,12 @@
   when:
   - find_lsetxattr.matched is defined and find_lsetxattr.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3443,12 +3443,12 @@
   when:
   - find_lsetxattr.matched is defined and find_lsetxattr.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3477,12 +3477,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3512,12 +3512,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3546,12 +3546,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3582,12 +3582,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_lsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_lsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lsetxattr
   - medium_severity
@@ -3614,12 +3614,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3650,12 +3650,12 @@
   register: find_chown
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3684,12 +3684,12 @@
   when:
   - find_chown.matched is defined and find_chown.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3718,12 +3718,12 @@
   when:
   - find_chown.matched is defined and find_chown.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3752,12 +3752,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3787,12 +3787,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3821,12 +3821,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3857,12 +3857,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_chown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_chown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_chown
   - medium_severity
@@ -3889,12 +3889,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -3925,12 +3925,12 @@
   register: find_fremovexattr
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -3959,12 +3959,12 @@
   when:
   - find_fremovexattr.matched is defined and find_fremovexattr.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -3993,12 +3993,12 @@
   when:
   - find_fremovexattr.matched is defined and find_fremovexattr.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -4027,12 +4027,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -4062,12 +4062,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -4096,12 +4096,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -4132,12 +4132,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fremovexattr
   - medium_severity
@@ -4164,12 +4164,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4200,12 +4200,12 @@
   register: find_lremovexattr
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4234,12 +4234,12 @@
   when:
   - find_lremovexattr.matched is defined and find_lremovexattr.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4268,12 +4268,12 @@
   when:
   - find_lremovexattr.matched is defined and find_lremovexattr.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4302,12 +4302,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4337,12 +4337,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4371,12 +4371,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4407,12 +4407,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_lremovexattr | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_lremovexattr | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_lremovexattr
   - medium_severity
@@ -4439,12 +4439,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4475,12 +4475,12 @@
   register: find_fchmod
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4509,12 +4509,12 @@
   when:
   - find_fchmod.matched is defined and find_fchmod.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4543,12 +4543,12 @@
   when:
   - find_fchmod.matched is defined and find_fchmod.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4577,12 +4577,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4612,12 +4612,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4646,12 +4646,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4682,12 +4682,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - audit_rules_dac_modification_fchmod | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ audit_rules_dac_modification_fchmod | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmod
   - medium_severity
@@ -4714,12 +4714,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4750,12 +4750,12 @@
   register: find_fchmodat
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4784,12 +4784,12 @@
   when:
   - find_fchmodat.matched is defined and find_fchmodat.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4818,12 +4818,12 @@
   when:
   - find_fchmodat.matched is defined and find_fchmodat.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4852,12 +4852,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4887,12 +4887,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4921,12 +4921,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4957,12 +4957,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - audit_rules_dac_modification_fchmodat | bool
-  - low_complexity | bool
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ audit_rules_dac_modification_fchmodat | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchmodat
   - medium_severity
@@ -4989,12 +4989,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5025,12 +5025,12 @@
   register: find_fsetxattr
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5059,12 +5059,12 @@
   when:
   - find_fsetxattr.matched is defined and find_fsetxattr.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5093,12 +5093,12 @@
   when:
   - find_fsetxattr.matched is defined and find_fsetxattr.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5127,12 +5127,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5162,12 +5162,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5196,12 +5196,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5232,12 +5232,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fsetxattr | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fsetxattr | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fsetxattr
   - medium_severity
@@ -5264,12 +5264,12 @@
     audit_arch: b{{ ansible_architecture | regex_replace('.*(\d\d$)','\1') }}
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5300,12 +5300,12 @@
   register: find_fchown
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5334,12 +5334,12 @@
   when:
   - find_fchown.matched is defined and find_fchown.matched == 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5368,12 +5368,12 @@
   when:
   - find_fchown.matched is defined and find_fchown.matched > 0
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5402,12 +5402,12 @@
     create: true
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5437,12 +5437,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5471,12 +5471,12 @@
     dest: /etc/audit/audit.rules
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5507,12 +5507,12 @@
   when:
   - audit_arch is defined and audit_arch == 'b64'
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - audit_rules_dac_modification_fchown | bool
-  - restrict_strategy | bool
-  - reboot_required | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ audit_rules_dac_modification_fchown | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ reboot_required | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - audit_rules_dac_modification_fchown
   - medium_severity
@@ -5542,12 +5542,12 @@
     state: present
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - auditd_data_retention_max_log_file | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ auditd_data_retention_max_log_file | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - auditd_data_retention_max_log_file
   - medium_severity
@@ -5570,12 +5570,12 @@
     state: present
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - auditd_data_retention_max_log_file_action | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ auditd_data_retention_max_log_file_action | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - auditd_data_retention_max_log_file_action
   - medium_severity
@@ -5599,12 +5599,12 @@
     state: present
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - auditd_data_retention_space_left_action | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ auditd_data_retention_space_left_action | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - auditd_data_retention_space_left_action
   - medium_severity
@@ -5631,12 +5631,12 @@
     state: present
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - medium_severity | bool
-  - restrict_strategy | bool
-  - auditd_data_retention_admin_space_left_action | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ medium_severity | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ auditd_data_retention_admin_space_left_action | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - auditd_data_retention_admin_space_left_action
   - medium_severity
@@ -5661,12 +5661,12 @@
     state: present
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - auditd_data_retention_action_mail_acct | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ auditd_data_retention_action_mail_acct | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - auditd_data_retention_action_mail_acct
   - medium_severity
@@ -5693,12 +5693,12 @@
     state: present
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - auditd_data_retention_num_logs | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ auditd_data_retention_num_logs | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - auditd_data_retention_num_logs
   - medium_severity
@@ -5721,12 +5721,12 @@
     state: started
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - enable_strategy | bool
-  - service_auditd_enabled | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ enable_strategy | bool }'
+  - '{ service_auditd_enabled | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - service_auditd_enabled
   - high_severity
@@ -5757,12 +5757,12 @@
   register: file_exists
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - file_groupowner_grub2_cfg | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ file_groupowner_grub2_cfg | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_groupowner_grub2_cfg
   - medium_severity
@@ -5783,12 +5783,12 @@
   when:
   - file_exists.stat is defined and file_exists.stat.exists
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - file_groupowner_grub2_cfg | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ file_groupowner_grub2_cfg | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_groupowner_grub2_cfg
   - medium_severity
@@ -5808,12 +5808,12 @@
   register: file_exists
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - file_owner_grub2_cfg | bool
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_owner_grub2_cfg | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_owner_grub2_cfg
   - medium_severity
@@ -5834,12 +5834,12 @@
   when:
   - file_exists.stat is defined and file_exists.stat.exists
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - file_owner_grub2_cfg | bool
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ file_owner_grub2_cfg | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - file_owner_grub2_cfg
   - medium_severity
@@ -5876,12 +5876,12 @@
   - CJIS-5.6.2.2
   - DISA-STIG-RHEL-07-010210
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - set_password_hashing_algorithm_logindefs | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ set_password_hashing_algorithm_logindefs | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Set Password Hashing Algorithm in /etc/libuser.conf
   lineinfile:
@@ -5907,12 +5907,12 @@
   - CJIS-5.6.2.2
   - DISA-STIG-RHEL-07-010220
   when:
-  - no_reboot_needed | bool
-  - set_password_hashing_algorithm_libuserconf | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ set_password_hashing_algorithm_libuserconf | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure PAM variable difok is set accordingly
   lineinfile:
@@ -5934,12 +5934,12 @@
   - CJIS-5.6.2.1.1
   - DISA-STIG-RHEL-07-010160
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - accounts_password_pam_difok | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ accounts_password_pam_difok | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Ensure PAM variable minlen is set accordingly
   lineinfile:
@@ -5960,12 +5960,12 @@
   - CJIS-5.6.2.1.1
   - DISA-STIG-RHEL-07-010280
   when:
-  - accounts_password_pam_minlen | bool
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ accounts_password_pam_minlen | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Set Account Expiration Following Inactivity
   lineinfile:
@@ -5989,12 +5989,12 @@
   - CJIS-5.6.2.1.1
   - DISA-STIG-RHEL-07-010310
   when:
-  - account_disable_post_pw_expiration | bool
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ account_disable_post_pw_expiration | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Set Password Minimum Age
   lineinfile:
@@ -6016,12 +6016,12 @@
   - CJIS-5.6.2.1.1
   - DISA-STIG-RHEL-07-010230
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - accounts_minimum_age_login_defs | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ accounts_minimum_age_login_defs | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Prevent Log In to Accounts With Empty Password - system-auth
   replace:
@@ -6046,12 +6046,12 @@
   - CJIS-5.5.2
   - DISA-STIG-RHEL-07-010290
   when:
-  - no_empty_passwords | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - configure_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_empty_passwords | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Prevent Log In to Accounts With Empty Password - password-auth
   replace:
@@ -6076,12 +6076,12 @@
   - CJIS-5.5.2
   - DISA-STIG-RHEL-07-010290
   when:
-  - no_empty_passwords | bool
-  - no_reboot_needed | bool
-  - high_severity | bool
-  - configure_strategy | bool
-  - medium_disruption | bool
-  - low_complexity | bool
+  - '{ no_empty_passwords | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ high_severity | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Limit the Number of Concurrent Login Sessions Allowed Per User
   lineinfile:
@@ -6102,12 +6102,12 @@
   - CJIS-5.5.2.2
   - DISA-STIG-RHEL-07-040000
   when:
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - accounts_max_concurrent_login_sessions | bool
-  - low_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ accounts_max_concurrent_login_sessions | bool }'
+  - '{ low_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
 
 - name: Enable SSH Warning Banner
   lineinfile:
@@ -6118,12 +6118,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - sshd_enable_warning_banner | bool
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ sshd_enable_warning_banner | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_enable_warning_banner
   - medium_severity
@@ -6151,12 +6151,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - sshd_set_idle_timeout | bool
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ sshd_set_idle_timeout | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_set_idle_timeout
   - medium_severity
@@ -6183,12 +6183,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - sshd_do_not_permit_user_env | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ sshd_do_not_permit_user_env | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_do_not_permit_user_env
   - medium_severity
@@ -6211,12 +6211,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - high_severity | bool
-  - sshd_allow_only_protocol2 | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ high_severity | bool }'
+  - '{ sshd_allow_only_protocol2 | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_allow_only_protocol2
   - high_severity
@@ -6241,12 +6241,12 @@
     line: HostbasedAuthentication no
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - disable_host_auth | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ disable_host_auth | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - disable_host_auth
   - medium_severity
@@ -6270,12 +6270,12 @@
   - firewalld
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - firewalld_sshd_port_enabled | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ firewalld_sshd_port_enabled | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - firewalld_sshd_port_enabled
   - medium_severity
@@ -6295,12 +6295,12 @@
   when:
   - sshd_listening_port != 22
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - firewalld_sshd_port_enabled | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ firewalld_sshd_port_enabled | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - firewalld_sshd_port_enabled
   - medium_severity
@@ -6320,12 +6320,12 @@
   when:
   - sshd_listening_port == 22
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - configure_strategy | bool
-  - medium_severity | bool
-  - firewalld_sshd_port_enabled | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ configure_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ firewalld_sshd_port_enabled | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - firewalld_sshd_port_enabled
   - medium_severity
@@ -6346,12 +6346,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - sshd_disable_rhosts | bool
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ sshd_disable_rhosts | bool }'
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_disable_rhosts
   - medium_severity
@@ -6376,12 +6376,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - sshd_set_keepalive | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ sshd_set_keepalive | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_set_keepalive
   - medium_severity
@@ -6408,12 +6408,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - sshd_disable_root_login | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ sshd_disable_root_login | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_disable_root_login
   - medium_severity
@@ -6441,12 +6441,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - sshd_disable_empty_passwords | bool
-  - high_severity | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ sshd_disable_empty_passwords | bool }'
+  - '{ high_severity | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_disable_empty_passwords
   - high_severity
@@ -6473,12 +6473,12 @@
     validate: /usr/sbin/sshd -t -f %s
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
-  - no_reboot_needed | bool
-  - restrict_strategy | bool
-  - medium_severity | bool
-  - sshd_use_approved_ciphers | bool
-  - low_disruption | bool
-  - low_complexity | bool
+  - '{ no_reboot_needed | bool }'
+  - '{ restrict_strategy | bool }'
+  - '{ medium_severity | bool }'
+  - '{ sshd_use_approved_ciphers | bool }'
+  - '{ low_disruption | bool }'
+  - '{ low_complexity | bool }'
   tags:
   - sshd_use_approved_ciphers
   - medium_severity
